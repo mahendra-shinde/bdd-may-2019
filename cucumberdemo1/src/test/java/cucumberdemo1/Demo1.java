@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="classpath:features",dryRun=true,monochrome=true)
+@CucumberOptions(features="classpath:features/square.feature",dryRun=true,monochrome=true)
 public class Demo1 {
 
 
