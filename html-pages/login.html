@@ -6,20 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login Page</title>
     <script>
-    function verifyLogin(){
-
+    function verifyLogin(form){
+            var usr = form.userName.value;
+            var pwd = form.userPwd.value;
+            if(usr.trim().length == 0){
+                document.getElementById("userErrMsg").innerHTML="Please enter username";
+            }
+            if(pwd.trim().length==0){
+                document.getElementById("pwdErrMsg").innerHTML="Please enter password";
+            }
     }
     </script>
 </head>
 <body>
     <h2>User login</h2>
+    <form>
     Username: <input type="text" name="userName"/>
     <div id="userErrMsg"></div>
     <br/>
     Password: <input type="password" name="userPwd"/>
     <div id="pwdErrMsg"></div>
     <br/>
-    <input type="button" value="Login" onclick="verifyLogin()" />
-    
+    <input type="button" id="btn1" value="Login" onclick="verifyLogin(this.form)" />
+    </form>
 </body>
 </html>
