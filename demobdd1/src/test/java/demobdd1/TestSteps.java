@@ -30,10 +30,6 @@ WebDriver driver = null;
 		driver.close();
 	}
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
 
 	@When("search WebDriver on selenium docs")
 	public void search_WebDriver_on_selenium_docs() {
@@ -45,7 +41,7 @@ WebDriver driver = null;
 	@Then("result list should appear")
 	public void result_list_should_appear() {
 	   String title = driver.getTitle();
-	   assertTrue(title.contains("Google search"));
+	   assertTrue(title.contains("Google Search"));
 	}
 
 }
